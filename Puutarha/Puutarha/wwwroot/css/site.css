@@ -57,7 +57,7 @@ body {
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
 }
-.h1_oma {
+.h1_lobster {
     font-family: 'Lobster', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 80px;
     /*color: #2b4222 ;*/
@@ -67,9 +67,14 @@ body {
     text-shadow: 4px 4px 4px #e5e5e5;
 }
 
-.h2_oma {
+.h2_lobster {
     font-family: 'Lobster', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 55px;
     color: whitesmoke;
-    text-shadow: 2px 2px 2px #808080;
+    /*text-shadow: 2px 2px 2px #808080;*/
+    text-shadow: 2px 2px 2px #4e3a3a
+}
+.tbl_background_white {
+    background-color:white; 
+    opacity: 0.80;
 }
