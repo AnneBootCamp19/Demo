@@ -1,0 +1,75 @@
+﻿@model Puutarha.Models.Istutukset
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Istutukset</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IstutusPvm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IstutusPvm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Määrä)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Määrä)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Yksikkö)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Yksikkö)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Istutuspaikka)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Istutuspaikka)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lämpötila)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lämpötila)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lisätieto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lisätieto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Poistettu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Poistettu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Poistopvm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Poistopvm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kasvi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kasvi.Nimi)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IstutusId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

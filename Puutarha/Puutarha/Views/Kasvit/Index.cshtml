@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Puutarha.Models.Kasvit>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nimi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lajike)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TieteellinenNimi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kuva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Monivuotinen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hyötykasvi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Poistettu)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lajike)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TieteellinenNimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kuva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monivuotinen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hyötykasvi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Poistettu)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.KasviId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.KasviId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.KasviId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+<div class="text-center">
+    <h1 class=" h1_oma">Tervetuloa</h1>
+    <h1 class="h1_oma">Korpelan puutarhaan</h1>
+    <br />
+    <h2 class=" h2_oma">Mitä haluat tehdä?</h2>
+    <br />
+    <br />
+    <table class="table-responsive-sm" align="center" cellpadding="4">
+        <tbody>
+
+            <tr class="bg-white">
+                <td>
+                    <a asp-controller="Kasvit" asp-action="Create" class="btn btn-primary">Lisään kasvilajeja</a>
+
+                </td>
+                <td>
+                    <a asp-controller="Istutukset" asp-action="Create" class="btn btn-primary">Istutan uusia</a>
+
+                </td>
+                <td>
+                    <a asp-controller="Istutukset" asp-action="Index" class="btn btn-primary">Poistan kasveja</a>
+
+                </td>
+                <td>
+                    <a asp-controller="Satotiedot" asp-action="Index"class="btn btn-primary">Korjaan satoa</a>
+
+                </td>
+                <td>
+                    <a href="#" class="btn btn-primary">Katselen tilastoja</a>
+
+                </td>
+
+
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</div>

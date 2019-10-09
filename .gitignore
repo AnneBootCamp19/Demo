@@ -1,5 +1,11 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
+.vs/
 /WebAppTesti2/.vs/WebAppTesti2
+/Puutarha/.vs
+[Bb]in/
+[Oo]bj/
+
+
+
