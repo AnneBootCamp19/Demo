@@ -38,7 +38,9 @@ namespace Puutarha.Models
 
                 entity.Property(e => e.IstutusId)
                     .HasColumnName("IstutusID")
-                    .ValueGeneratedNever();
+                    .ValueGeneratedOnAdd(); 
+
+                  //  .ValueGeneratedNever();
 
                 entity.Property(e => e.IstutusPvm)
                     .HasColumnType("date")
@@ -71,7 +73,8 @@ namespace Puutarha.Models
 
                 entity.Property(e => e.KasviId)
                     .HasColumnName("KasviID")
-                    .ValueGeneratedNever();
+                    .ValueGeneratedOnAdd();
+                   // .ValueGeneratedNever();
 
                 entity.Property(e => e.Lajike).HasMaxLength(50);
 
@@ -88,7 +91,8 @@ namespace Puutarha.Models
 
                 entity.Property(e => e.SatoId)
                     .HasColumnName("SatoID")
-                    .ValueGeneratedNever();
+                    .ValueGeneratedOnAdd();
+                   // .ValueGeneratedNever();
 
                 entity.Property(e => e.KasviId).HasColumnName("KasviID");
 
