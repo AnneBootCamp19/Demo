@@ -1,4 +1,4 @@
-# Demo
+# Demo (Puutarha-hakemistossa)
 Tässä demossa on tarkoitus harjoitella tekniikoita, joita käymme läpi Turun CodeBootcamp:issa. 
 Valitsin aiheeksi puutarhapäiväkirjani siirtämisen digiaikaan. Tavoitteeni on tehdä sovellus,
 jolla tallennetaan tietokantaan (SqlServer Express) perustietoja kasveista, lisätään istutustietoja
