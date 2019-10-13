@@ -1,17 +1,17 @@
 ﻿@model IEnumerable<Puutarha.Models.Istutukset>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista istutuksista";
 }
 
-<h1>Index</h1>
+<h3>Lista istutuksista</h3>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Lisää uusi istutus</a>
 </p>
-<table class="table">
+<table class="table tbl_background_white">
     <thead>
-        <tr class="tbl_background_white">
+        <tr>
             <th>
                 @Html.DisplayNameFor(model => model.IstutusPvm)
             </th>
@@ -31,11 +31,12 @@
                 @Html.DisplayNameFor(model => model.Lisätieto)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Poistettu)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Poistopvm)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Poistettu)
+            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Kasvi)
             </th>
@@ -63,19 +64,20 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Lisätieto)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Poistettu)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.Poistopvm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Poistettu)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Kasvi.Nimi)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IstutusId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IstutusId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IstutusId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IstutusId">Muokkaa</a> |
+                <a asp-action="Details" asp-route-id="@item.IstutusId">Info</a> |
+                <a asp-action="Delete" asp-route-id="@item.IstutusId">Poista</a>
             </td>
         </tr>
 }

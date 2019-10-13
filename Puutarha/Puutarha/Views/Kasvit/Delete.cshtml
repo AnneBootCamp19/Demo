@@ -1,14 +1,14 @@
 ﻿@model Puutarha.Models.Kasvit
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Poista kasvitieto";
 }
 
-<h1>Delete</h1>
+<h3>Poista kasvin tiedot</h3>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Haluatko varmasti poistaa nämä tiedot?</h3>
 <div>
-    <h4>Kasvit</h4>
+ 
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -57,7 +57,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="KasviId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Poista" class="btn btn-danger" /> |
+        <a asp-action="Index">Palaa listaukseen</a>
     </form>
 </div>

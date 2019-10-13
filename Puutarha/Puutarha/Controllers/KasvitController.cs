@@ -51,6 +51,7 @@ namespace Puutarha.Controllers
         // POST: Kasvit/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("KasviId,Nimi,Lajike,TieteellinenNimi,Kuva,Monivuotinen,Hyötykasvi,Poistettu")] Kasvit kasvit)
@@ -83,6 +84,7 @@ namespace Puutarha.Controllers
         // POST: Kasvit/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("KasviId,Nimi,Lajike,TieteellinenNimi,Kuva,Monivuotinen,Hyötykasvi,Poistettu")] Kasvit kasvit)

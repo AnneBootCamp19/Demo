@@ -47,6 +47,7 @@ namespace Puutarha.Controllers
         // GET: Istutukset/Create
         public IActionResult Create()
         {
+            
             ViewData["KasviId"] = new SelectList(_context.Kasvit, "KasviId", "Nimi");
             return View();
         }
@@ -64,7 +65,9 @@ namespace Puutarha.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["KasviId"] = new SelectList(_context.Kasvit, "KasviId", "Nimi", istutukset.KasviId);
+          
             return View(istutukset);
         }
 

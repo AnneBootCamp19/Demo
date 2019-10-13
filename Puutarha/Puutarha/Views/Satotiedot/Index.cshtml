@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Puutarha.Models.Satotiedot>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista satotiedoista";
 }
 
-<h1>Index</h1>
+<h3>Listaus satotiedoista</h3>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Lisää uusi satotieto</a>
 </p>
 <table class="table">
     <thead>
@@ -55,9 +55,9 @@
                 @Html.DisplayFor(modelItem => item.Kasvi.Nimi)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.SatoId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.SatoId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.SatoId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.SatoId">Muokkaa</a> |
+                <a asp-action="Details" asp-route-id="@item.SatoId">Info</a> |
+                <a asp-action="Delete" asp-route-id="@item.SatoId">Poista</a>
             </td>
         </tr>
 }

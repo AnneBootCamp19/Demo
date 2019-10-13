@@ -1,25 +1,36 @@
 ﻿@model Puutarha.Models.Istutukset
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Lisää istutus";
 }
 
-<h1>Create</h1>
-
-<h4>Istutukset</h4>
+<h3>Lisää uusi istutus</h3>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="IstutusId" class="control-label"></label>
-                <input asp-for="IstutusId" class="form-control" />
-                <span asp-validation-for="IstutusId" class="text-danger"></span>
-            </div>
+            <!--
+    <div class="form-group">
+        <label asp-for="IstutusId" class="control-label"></label>
+        <input asp-for="IstutusId" class="form-control" />
+        <span asp-validation-for="IstutusId" class="text-danger"></span>
+    </div>
+    -->
             <div class="form-group">
                 <label asp-for="KasviId" class="control-label"></label>
-                <select asp-for="KasviId" class ="form-control" asp-items="ViewBag.KasviId"></select>
+                <select asp-for="KasviId" class="form-control" asp-items="ViewBag.KasviId"></select>
+            </div>
+            <!--
+      <div class="form-group">
+          <label asp-for="KasviId" class="control-label"></label>
+          <select asp-for="KasviId" class="form-control" asp-items="ViewBag.Lajike"></select>
+      </div>
+    -->
+            <div class="form-group">
+                <label asp-for="IstutusPvm" class="control-label"></label>
+                <input asp-for="IstutusPvm" class="form-control" />
+                <span asp-validation-for="IstutusPvm" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Määrä" class="control-label"></label>
@@ -46,25 +57,28 @@
                 <input asp-for="Lisätieto" class="form-control" />
                 <span asp-validation-for="Lisätieto" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Poistettu" /> @Html.DisplayNameFor(model => model.Poistettu)
-                </label>
-            </div>
+
+        <!--
             <div class="form-group">
                 <label asp-for="Poistopvm" class="control-label"></label>
                 <input asp-for="Poistopvm" class="form-control" />
                 <span asp-validation-for="Poistopvm" class="text-danger"></span>
             </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" asp-for="Poistettu" /> @Html.DisplayNameFor(model => model.Poistettu)
+                </label>
+            </div>
+        -->
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Tallenna" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Palaa listaukseen</a>
 </div>
 
 @section Scripts {

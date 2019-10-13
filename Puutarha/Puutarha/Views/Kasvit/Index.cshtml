@@ -1,18 +1,19 @@
 ﻿@model IEnumerable<Puutarha.Models.Kasvit>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista kasveista";
 }
 
-<h1>Index</h1>
+<h3>Lista kasveista</h3>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Lisää uusi kasvi</a>
 </p>
-<table class="table tbl_background_white"">
+<table class="table tbl_background_white">
     <thead>
-        <tr >
+        <tr  >
             <th>
+               
                 @Html.DisplayNameFor(model => model.Nimi)
             </th>
             <th>
@@ -61,9 +62,9 @@
                 @Html.DisplayFor(modelItem => item.Poistettu)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.KasviId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.KasviId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.KasviId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.KasviId">Muokkaa</a> |
+                <a asp-action="Details" asp-route-id="@item.KasviId">Info</a> |
+                <a asp-action="Delete" asp-route-id="@item.KasviId">Poista</a>
             </td>
         </tr>
 }

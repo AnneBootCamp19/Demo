@@ -1,14 +1,13 @@
 ﻿@model Puutarha.Models.Kasvit
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Kasvin tiedot";
 }
 
-<h1>Details</h1>
+<h3>Kasvin tiedot</h3>
 
 <div>
-    <h4>Kasvit</h4>
-    <hr />
+      <hr />
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Nimi)
@@ -55,6 +54,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.KasviId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.KasviId">Muokkaa</a> |
+    <a asp-action="Index">Palaa listaukseen</a>
 </div>
